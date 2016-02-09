@@ -3,17 +3,44 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Leibnik</title>
+  <title>理解android矩阵 | Leibnik</title>
   <meta name="viewport" content="width=device-width">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Leibnik">
-<meta property="og:url" content="http://leibnik.github.io/index.html">
+  <meta name="description" content="许多时候我们在数学课本上学的可能更多是知其然而不知其所以然，然而要理解一个概念可能只需要一个观点才不至于被搞懵，比如从应用的角度出发把线性代数当作是一种人为设计的领域特定语言（domain specific language）可能更容易被程序员们所接受。具体参考：程序观点下的线性代数。
+下面先简单介绍（复习）矩阵的定义、矩阵的运算，然后才是在android中使用矩阵
+矩阵的定义
+
+由$m\">
+<meta property="og:type" content="article">
+<meta property="og:title" content="理解android矩阵">
+<meta property="og:url" content="http://leibnik.github.io/2016/02/10/android-matrix-in-android/index.html">
 <meta property="og:site_name" content="Leibnik">
-<meta property="og:description">
+<meta property="og:description" content="许多时候我们在数学课本上学的可能更多是知其然而不知其所以然，然而要理解一个概念可能只需要一个观点才不至于被搞懵，比如从应用的角度出发把线性代数当作是一种人为设计的领域特定语言（domain specific language）可能更容易被程序员们所接受。具体参考：程序观点下的线性代数。
+下面先简单介绍（复习）矩阵的定义、矩阵的运算，然后才是在android中使用矩阵
+矩阵的定义
+
+由$m\">
+<meta property="og:image" content="http://ww3.sinaimg.cn/mw690/006nezkigw1f0p2lfksmcj308m0fcab4.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/mw690/006nezkigw1f0p2zxemhtj30ha0fc77a.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/mw690/006nezkigw1f0p2zycipjj30hc0fcacz.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/mw690/006nezkigw1f0qs9ejo0xj308m0fcaat.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/mw690/006nezkigw1f0qs9gfhwlj308m0fc3z5.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/mw690/006nezkigw1f0qs9kg7auj308m0fcaaj.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/mw690/006nezkigw1f0r69z0gvej308m0fcgmi.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/mw690/006nezkigw1f0thi2pj2lj30au08uaa3.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/mw690/006nezkigw1f0r6a262ttj308m0fcdgp.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/mw690/006nezkigw1f0thi43hg0j30a308tq30.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/mw690/006nezkigw1f0r6a50d3gj308m0fcmy2.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/mw690/006nezkigw1f0r6a5qfrwj308m0fcmxo.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/mw690/006nezkigw1f0tlhdoyk2j30ac08d0su.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/mw690/006nezkigw1f0r6a7axooj308m0fcaay.jpg">
+<meta property="og:updated_time" content="2016-02-09T18:17:56.844Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Leibnik">
-<meta name="twitter:description">
+<meta name="twitter:title" content="理解android矩阵">
+<meta name="twitter:description" content="许多时候我们在数学课本上学的可能更多是知其然而不知其所以然，然而要理解一个概念可能只需要一个观点才不至于被搞懵，比如从应用的角度出发把线性代数当作是一种人为设计的领域特定语言（domain specific language）可能更容易被程序员们所接受。具体参考：程序观点下的线性代数。
+下面先简单介绍（复习）矩阵的定义、矩阵的运算，然后才是在android中使用矩阵
+矩阵的定义
+
+由$m\">
   
     <link rel="alternative" href="/atom.xml" title="Leibnik" type="application/atom+xml">
   
@@ -46,9 +73,7 @@
 </header>
 
     <div id="main">
-      
-  
-    <article id="post-android-matrix-in-android" class="post">
+      <article id="post-android-matrix-in-android" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2016/02/10/android-matrix-in-android/" class="article-date">
@@ -64,8 +89,8 @@
 	<header class="entry-header">
 		
   
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/02/10/android-matrix-in-android/">理解android矩阵</a>
+    <h1 class="article-title entry-title" itemprop="name">
+      理解android矩阵
     </h1>
   
 
@@ -415,24 +440,58 @@ y_{0}\\
 		</div>
 	</footer>
 	
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
 
 
 	
+    
+  
 </article>
 
 
-	<hr class="article-devider">
 
 
 
 
 
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="android-matrix-in-android" data-title="理解android矩阵" data-url="http://leibnik.github.io/2016/02/10/android-matrix-in-android/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"leibnik"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
 
 
-
-  
-  
 
     </div>
     <div class="mb-search">
