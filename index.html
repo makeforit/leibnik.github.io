@@ -51,8 +51,8 @@
     <article id="post-android-matrix-in-android" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
-			<a href="/2016/02/10/android-matrix-in-android/" class="article-date">
-  <time datetime="2016-02-09T18:17:56.844Z" itemprop="datePublished">2016-02-10</time>
+			<a href="/2016/02/15/android-matrix-in-android/" class="article-date">
+  <time datetime="2016-02-14T20:40:00.350Z" itemprop="datePublished">2016-02-15</time>
 </a>
 		</span>
 		<span class="meta-elements author">Leibnik</span>
@@ -65,7 +65,7 @@
 		
   
     <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/02/10/android-matrix-in-android/">理解android矩阵</a>
+      <a class="article-title" href="/2016/02/15/android-matrix-in-android/">理解android矩阵</a>
     </h1>
   
 
@@ -401,6 +401,70 @@ y_{0}\\
 <p class="caption">y轴方向的错切变换</p>
 </div>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FmMatrix</span> <span class="keyword">extends</span> <span class="title">Fragment</span> <span class="keyword">implements</span> <span class="title">View</span>.<span class="title">OnClickListener</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Button translateBtn, skewBtn, rotateBtn, scaleBtn;</span><br><span class="line">    <span class="keyword">private</span> ImageView imageView;</span><br><span class="line">    <span class="keyword">private</span> Bitmap picture;</span><br><span class="line">    <span class="keyword">private</span> Bitmap product;</span><br><span class="line">    <span class="keyword">private</span> Canvas mCanvas;</span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Nullable</span></span><br><span class="line">    <span class="annotation">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> View <span class="title">onCreateView</span><span class="params">(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        View view = inflater.inflate(R.layout.fm_matrix, container, <span class="keyword">false</span>);</span><br><span class="line">        translateBtn = (Button) view.findViewById(R.id.translate);</span><br><span class="line">        skewBtn = (Button) view.findViewById(R.id.skew);</span><br><span class="line">        rotateBtn = (Button) view.findViewById(R.id.rotate);</span><br><span class="line">        scaleBtn = (Button) view.findViewById(R.id.scale);</span><br><span class="line">        imageView = (ImageView) view.findViewById(R.id.imageview);</span><br><span class="line"></span><br><span class="line">        picture = BitmapFactory.decodeResource(getResources(), R.drawable.cat);</span><br><span class="line">        product = Bitmap.createBitmap(picture.getWidth() * <span class="number">2</span>, picture.getHeight() * <span class="number">2</span>,</span><br><span class="line">                Bitmap.Config.ARGB_8888);</span><br><span class="line">        imageView.setImageBitmap(picture);</span><br><span class="line">        mCanvas = <span class="keyword">new</span> Canvas(product);</span><br><span class="line"></span><br><span class="line">        translateBtn.setOnClickListener(<span class="keyword">this</span>);</span><br><span class="line">        skewBtn.setOnClickListener(<span class="keyword">this</span>);</span><br><span class="line">        rotateBtn.setOnClickListener(<span class="keyword">this</span>);</span><br><span class="line">        scaleBtn.setOnClickListener(<span class="keyword">this</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> view;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View v)</span> </span>&#123;</span><br><span class="line">        mCanvas.drawColor(Color.WHITE);</span><br><span class="line">        <span class="keyword">switch</span> (v.getId()) &#123;</span><br><span class="line">            <span class="keyword">case</span> R.id.translate:</span><br><span class="line">                Matrix translateMatrix = <span class="keyword">new</span> Matrix();</span><br><span class="line">                translateMatrix.setTranslate(<span class="number">100.0f</span>, <span class="number">100.0f</span>);</span><br><span class="line">                mCanvas.drawBitmap(picture, translateMatrix, <span class="keyword">null</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> R.id.skew:</span><br><span class="line">                Matrix skewMatrix = <span class="keyword">new</span> Matrix();</span><br><span class="line">                skewMatrix.setSkew(<span class="number">0.0f</span>, <span class="number">0.8f</span>);</span><br><span class="line">                mCanvas.drawBitmap(picture, skewMatrix, <span class="keyword">null</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> R.id.rotate:</span><br><span class="line">                Matrix rotateMatrix = <span class="keyword">new</span> Matrix();</span><br><span class="line">                rotateMatrix.setRotate(<span class="number">60.0f</span>, picture.getWidth() / <span class="number">2</span> + imageView.getPaddingLeft(),</span><br><span class="line">                        picture.getHeight() / <span class="number">2</span> + imageView.getPaddingTop());</span><br><span class="line">                mCanvas.drawBitmap(picture, rotateMatrix, <span class="keyword">null</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> R.id.scale:</span><br><span class="line">                Matrix scaleMatrix = <span class="keyword">new</span> Matrix();</span><br><span class="line">                scaleMatrix.setScale(<span class="number">0.5f</span>, <span class="number">0.5f</span>);</span><br><span class="line">                mCanvas.drawBitmap(picture, scaleMatrix, <span class="keyword">null</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        imageView.setImageBitmap(product);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="参考">参考</h3>
+<p><a href="http://baike.baidu.com/link?url=bzzHOYD7wyh_jrzymzlSOWTYXmipdudcZ6wH8mty0mIO0XcGhknUT9wJlLrE0RjxUEEblS99SBwbVBCHxULY7Xj8VyxDcGLVVpU7l7TKPb8BIuAzJL0iqa1bw9Y-l-7F" target="_blank" rel="external">《Android群英传》第六章</a></p>
+<p><a href="http://baike.baidu.com/link?url=dTqZyGD-SSx9tOsdoLJvWu1Bf0SEEhAdfoli8F0FqxfWgnZUDenOwm4zsG9q1j059z8tDKY1MHnGRprbqkByiq" target="_blank" rel="external">工程数学线性代数第五版</a></p>
+<p><a href="http://www.cnblogs.com/qiengo/archive/2012/06/30/2570874.html#code" target="_blank" rel="external">Android Matrix</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+			</span>
+		</div>
+	</footer>
+	
+
+
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-blur-algorithm" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/02/11/blur-algorithm/" class="article-date">
+  <time datetime="2016-02-11T09:10:33.743Z" itemprop="datePublished">2016-02-11</time>
+</a>
+		</span>
+		<span class="meta-elements author">Leibnik</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/02/11/blur-algorithm/">模糊算法</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>高斯分布函数可表示一个一维的函数G(x) <span class="math display">\[
+G(x) = \frac{1}{\sqrt{2\pi}\sigma}e^{\frac{-x^2}{2\sigma^2}}
+\]</span> 或者一个二维的函数G(x,y) <span class="math display">\[
+G(x,y) = \frac{1}{2\pi\sigma^2}e^{\frac{-x^2+y^2}{2\sigma^2}}
+\]</span></p>
 
     
 	</div>
