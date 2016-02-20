@@ -460,6 +460,12 @@ pre .deletion {
 #nav-search-btn:before {
   content: "\f002";
 }
+#nav-weibo-btn:before {
+  content: "\f18a";
+}
+#nav-github-btn:before {
+  content: "\f09b";
+}
 #search-form-wrap {
   display: none;
   position: absolute;
