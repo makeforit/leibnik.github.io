@@ -5,20 +5,12 @@
   
   <title>理解android矩阵 | Leibnik</title>
   <meta name="viewport" content="width=device-width">
-  <meta name="description" content="许多时候我们在数学课本上学的可能更多是知其然而不知其所以然，然而要理解一个概念可能只需要一个观点才不至于被搞懵，比如从应用的角度出发把线性代数当作是一种人为设计的领域特定语言（domain specific language）可能更容易被程序员们所接受。具体参考：程序观点下的线性代数。
-下面先简单介绍（复习）矩阵的定义、矩阵的运算，然后才是在android中使用矩阵
-矩阵的定义
-
-由$m\">
+  <meta name="description" content="许多时候我们在数学课本上学的可能更多是知其然而不知其所以然，然而要理解一个概念可能只需要一个观点才不至于被搞懵，比如从应用的角度出发把线性代数当作是一种人为设计的领域特定语言（domain specific language）可能更容易被程序员们所接受。具体参考：程序观点下的线性代数。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="理解android矩阵">
 <meta property="og:url" content="http://leibnik.github.io/2016/01/12/android-matrix-in-android/index.html">
 <meta property="og:site_name" content="Leibnik">
-<meta property="og:description" content="许多时候我们在数学课本上学的可能更多是知其然而不知其所以然，然而要理解一个概念可能只需要一个观点才不至于被搞懵，比如从应用的角度出发把线性代数当作是一种人为设计的领域特定语言（domain specific language）可能更容易被程序员们所接受。具体参考：程序观点下的线性代数。
-下面先简单介绍（复习）矩阵的定义、矩阵的运算，然后才是在android中使用矩阵
-矩阵的定义
-
-由$m\">
+<meta property="og:description" content="许多时候我们在数学课本上学的可能更多是知其然而不知其所以然，然而要理解一个概念可能只需要一个观点才不至于被搞懵，比如从应用的角度出发把线性代数当作是一种人为设计的领域特定语言（domain specific language）可能更容易被程序员们所接受。具体参考：程序观点下的线性代数。">
 <meta property="og:image" content="http://ww3.sinaimg.cn/mw690/006nezkigw1f0p2lfksmcj308m0fcab4.jpg">
 <meta property="og:image" content="http://ww2.sinaimg.cn/mw690/006nezkigw1f0p2zxemhtj30ha0fc77a.jpg">
 <meta property="og:image" content="http://ww4.sinaimg.cn/mw690/006nezkigw1f0p2zycipjj30hc0fcacz.jpg">
@@ -33,14 +25,10 @@
 <meta property="og:image" content="http://ww3.sinaimg.cn/mw690/006nezkigw1f0r6a5qfrwj308m0fcmxo.jpg">
 <meta property="og:image" content="http://ww2.sinaimg.cn/mw690/006nezkigw1f0tlhdoyk2j30ac08d0su.jpg">
 <meta property="og:image" content="http://ww2.sinaimg.cn/mw690/006nezkigw1f0r6a7axooj308m0fcaay.jpg">
-<meta property="og:updated_time" content="2016-02-21T00:37:02.316Z">
+<meta property="og:updated_time" content="2016-02-24T14:48:02.101Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="理解android矩阵">
-<meta name="twitter:description" content="许多时候我们在数学课本上学的可能更多是知其然而不知其所以然，然而要理解一个概念可能只需要一个观点才不至于被搞懵，比如从应用的角度出发把线性代数当作是一种人为设计的领域特定语言（domain specific language）可能更容易被程序员们所接受。具体参考：程序观点下的线性代数。
-下面先简单介绍（复习）矩阵的定义、矩阵的运算，然后才是在android中使用矩阵
-矩阵的定义
-
-由$m\">
+<meta name="twitter:description" content="许多时候我们在数学课本上学的可能更多是知其然而不知其所以然，然而要理解一个概念可能只需要一个观点才不至于被搞懵，比如从应用的角度出发把线性代数当作是一种人为设计的领域特定语言（domain specific language）可能更容易被程序员们所接受。具体参考：程序观点下的线性代数。">
   
     <link rel="alternative" href="/atom.xml" title="Leibnik" type="application/atom+xml">
   
@@ -102,6 +90,7 @@
 	<div class="entry-content">
 		
     	<p>许多时候我们在数学课本上学的可能更多是知其然而不知其所以然，然而要理解一个概念可能只需要一个观点才不至于被搞懵，比如从应用的角度出发把线性代数当作是一种人为设计的<strong>领域特定语言</strong>（domain specific language）可能更容易被程序员们所接受。具体参考：<a href="http://www.cnblogs.com/weidagang2046/p/linear-algebra-from-programming-perspective.html" target="_blank" rel="external">程序观点下的线性代数</a>。</p>
+<a id="more"></a>
 <p>下面先简单介绍（复习）矩阵的定义、矩阵的运算，然后才是在android中使用矩阵</p>
 <h3 id="矩阵的定义">矩阵的定义</h3>
 <blockquote>

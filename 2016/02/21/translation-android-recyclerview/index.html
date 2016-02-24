@@ -28,7 +28,7 @@ RecyclerView 是一个更高级版本的ListView，较后者有着性能的提�
 <meta property="og:image" content="http://ww2.sinaimg.cn/mw690/006nezkigw1f16n7lfcmsj30k00qh0us.jpg">
 <meta property="og:image" content="http://ww4.sinaimg.cn/mw690/006nezkigw1f16n5zw484j30k00fptad.jpg">
 <meta property="og:image" content="http://ww2.sinaimg.cn/mw690/006nezkigw1f16n5ytcnuj30k00hjwfs.jpg">
-<meta property="og:updated_time" content="2016-02-21T10:00:20.797Z">
+<meta property="og:updated_time" content="2016-02-24T14:55:03.298Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【译】android中使用RecyclerView">
 <meta name="twitter:description" content="此篇博客为译文，转载请注明出处。
@@ -107,6 +107,7 @@ RecyclerView 是一个更高级版本的ListView，较后者有着性能的提�
 <li>代码地址：<a href="https://github.com/leibnik/RecyclerViewDemo" target="_blank" rel="external">RecyclerViewDemo</a></li>
 </ul>
 <p><a href="http://developer.android.com/reference/android/support/v7/widget/RecyclerView.html" target="_blank" rel="external">RecyclerView</a> 是一个更高级版本的ListView，较后者有着性能的提升和其他的优点。同时使用RecyclerView和<a href="http://developer.android.com/reference/android/support/v7/widget/CardView.html" target="_blank" rel="external">CardView</a>来生成列表和表格都是非常简单的事情。<a href="http://developer.android.com/training/material/lists-cards.html" target="_blank" rel="external">这里</a> 有关于RecyclerView和一些例子的完整介绍。</p>
+<a id="more"></a>
 <p>在本次教程里，我们将学习如何结合自定义布局渲染出一个简单的RecyclerView。同时，我们将学习如何写出一个适配器类，以及为列表添加分割线，为列表项添加点击事件。 具体的，我们将把这个RecyclerView设计成呈现电影信息的列表，包括标题，类型，以及发行时间。</p>
 <p>以下就是包含必要配置的RecyclerView。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">android.support.v7.widget.RecyclerView</span></span><br><span class="line">        <span class="attribute">android:id</span>=<span class="value">"@+id/recycler_view"</span></span><br><span class="line">        <span class="attribute">android:scrollbars</span>=<span class="value">"vertical"</span></span><br><span class="line">        <span class="attribute">android:layout_width</span>=<span class="value">"match_parent"</span></span><br><span class="line">        <span class="attribute">android:layout_height</span>=<span class="value">"wrap_content"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
@@ -193,6 +194,15 @@ RecyclerView 是一个更高级版本的ListView，较后者有着性能的提�
 	
     
 <nav id="article-nav">
+  
+    <a href="/2016/02/24/ss/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          222
+        
+      </div>
+    </a>
   
   
     <a href="/2016/02/20/booklist-first-half-of-2016/" id="article-nav-older" class="article-nav-link-wrap">
