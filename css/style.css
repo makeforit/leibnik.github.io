@@ -112,7 +112,7 @@ button::-moz-focus-inner {
 body {
   background: #fff;
   color: #4f5759;
-  font: 100% 'Hiragino Sans GB W3', 'Microsoft YaHei', Tahoma, Arial, 'lucida grande', 'lucida sans unicode', lucida, 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Kaku Gothic Pro', Meiryo, 'MS PGothic', sans-serif;
+  font: 100% 'TIBch', 'Classic Grotesque W01', 'Helvetica Neue', 'Hiragino Sans GB W3', 'Microsoft YaHei', Tahoma, Arial, 'lucida grande', 'lucida sans unicode', lucida, 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Kaku Gothic Pro', Meiryo, 'MS PGothic', sans-serif;
   text-rendering: optimizelegibility;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
@@ -513,7 +513,7 @@ pre .deletion {
   color: #4f5759;
   letter-spacing: 1px;
   width: 90%;
-  font: 13px 'Hiragino Sans GB W3', 'Microsoft YaHei', Tahoma, Arial, 'lucida grande', 'lucida sans unicode', lucida, 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Kaku Gothic Pro', Meiryo, 'MS PGothic', sans-serif;
+  font: 13px 'TIBch', 'Classic Grotesque W01', 'Helvetica Neue', 'Hiragino Sans GB W3', 'Microsoft YaHei', Tahoma, Arial, 'lucida grande', 'lucida sans unicode', lucida, 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Kaku Gothic Pro', Meiryo, 'MS PGothic', sans-serif;
   outline: none;
 }
 .search-form-input::-webkit-search-results-decoration,
@@ -694,7 +694,7 @@ pre .deletion {
 }
 .entry-content blockquote footer {
   font-size: 100%;
-  font-family: 'Hiragino Sans GB W3', 'Microsoft YaHei', Tahoma, Arial, 'lucida grande', 'lucida sans unicode', lucida, 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Kaku Gothic Pro', Meiryo, 'MS PGothic', sans-serif;
+  font-family: 'TIBch', 'Classic Grotesque W01', 'Helvetica Neue', 'Hiragino Sans GB W3', 'Microsoft YaHei', Tahoma, Arial, 'lucida grande', 'lucida sans unicode', lucida, 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Kaku Gothic Pro', Meiryo, 'MS PGothic', sans-serif;
 }
 .entry-content blockquote footer cite:before {
   content: "—";
@@ -1140,7 +1140,7 @@ pre .deletion {
   }
   .mb-search input {
     background: #fff;
-    font-family: 'Hiragino Sans GB W3', 'Microsoft YaHei', Tahoma, Arial, 'lucida grande', 'lucida sans unicode', lucida, 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Kaku Gothic Pro', Meiryo, 'MS PGothic', sans-serif;
+    font-family: 'TIBch', 'Classic Grotesque W01', 'Helvetica Neue', 'Hiragino Sans GB W3', 'Microsoft YaHei', Tahoma, Arial, 'lucida grande', 'lucida sans unicode', lucida, 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Kaku Gothic Pro', Meiryo, 'MS PGothic', sans-serif;
     font-size: 15px;
     padding: 5px 10px;
     border-bottom: 2px solid #ddd !important;
