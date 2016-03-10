@@ -90,9 +90,15 @@
 		<div class="entry-meta-footer">
 			<span class="category">
 				
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/设计模式/">设计模式</a>
+  </div>
+
 			</span>
 			<span class="tags">
 				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
+
 			</span>
 		</div>
 	</footer>
@@ -150,9 +156,15 @@
 		<div class="entry-meta-footer">
 			<span class="category">
 				
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/android/">android</a>
+  </div>
+
 			</span>
 			<span class="tags">
 				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/第三方/">第三方</a></li></ul>
+
 			</span>
 		</div>
 	</footer>
@@ -217,9 +229,15 @@
 		<div class="entry-meta-footer">
 			<span class="category">
 				
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/android/">android</a>
+  </div>
+
 			</span>
 			<span class="tags">
 				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/翻译/">翻译</a></li></ul>
+
 			</span>
 		</div>
 	</footer>
@@ -279,9 +297,15 @@
 		<div class="entry-meta-footer">
 			<span class="category">
 				
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/书单/">书单</a>
+  </div>
+
 			</span>
 			<span class="tags">
 				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/书单/">书单</a></li></ul>
+
 			</span>
 		</div>
 	</footer>
@@ -339,9 +363,231 @@
 		<div class="entry-meta-footer">
 			<span class="category">
 				
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/android/">android</a>
+  </div>
+
 			</span>
 			<span class="tags">
 				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/math/">math</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+
+
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-note-android-broadcastreceiver" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/06/02/note-android-broadcastreceiver/" class="article-date">
+  <time datetime="2015-06-01T16:00:00.000Z" itemprop="datePublished">2015-06-02</time>
+</a>
+		</span>
+		<span class="meta-elements author">Leibnik</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2015/06/02/note-android-broadcastreceiver/">【笔记】BroadcastReceiver</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+			<p>《Android第一行代码》的学习笔记</p>
+<h3 id="一-接收广播">一、 接收广播</h3>
+<h4 id="动态注册广播"><strong>动态注册广播</strong></h4>
+<p>通过Toast提醒网络发生变化</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">Activity</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> IntentFilter intentFilter;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> NetworkChangeReceiver networkChangeReceiver;</span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line">        intentFilter = <span class="keyword">new</span> IntentFilter();</span><br><span class="line">        intentFilter.addAction(<span class="string">"android.net.conn.CONNECTIVITY_CHANGE"</span>);</span><br><span class="line">        networkChangeReceiver = <span class="keyword">new</span> NetworkChangeReceiver();</span><br><span class="line">        registerReceiver(networkChangeReceiver,intentFilter);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="annotation">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onDestroy</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onDestroy();</span><br><span class="line">        unregisterReceiver(networkChangeReceiver);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">NetworkChangeReceiver</span> <span class="keyword">extends</span> <span class="title">BroadcastReceiver</span></span>&#123;</span><br><span class="line">        <span class="annotation">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onReceive</span><span class="params">(Context context, Intent intent)</span> </span>&#123;</span><br><span class="line">            Toast.makeText(context, <span class="string">"network changes"</span>,Toast.LENGTH_LONG).show();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+			
+				<p class="article-more-link">
+					<a href="/2015/06/02/note-android-broadcastreceiver/#more">Read More...</a>
+				</p>
+      
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/android/">android</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/note/">note</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+
+
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-note-android-fragment" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/05/31/note-android-fragment/" class="article-date">
+  <time datetime="2015-05-30T16:00:00.000Z" itemprop="datePublished">2015-05-31</time>
+</a>
+		</span>
+		<span class="meta-elements author">Leibnik</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2015/05/31/note-android-fragment/">【笔记】Android Fragment</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+			<p>《Android第一行代码》的学习笔记</p>
+<h4 id="一动态添加碎片的步骤"><strong>一、动态添加碎片的步骤</strong></h4>
+<ol style="list-style-type: decimal">
+<li>创建待添加的碎片实例。</li>
+<li>获取到FragmentManager，在活动中可以直接调用getFragmentMananager()方法得到。</li>
+<li>通过调用beginTransaction()开启事务</li>
+<li>向容器内加入碎片，一般使用replace()方法实现，需要传入容器的id和待添加的碎片实例</li>
+<li>提交事务，调用commit()方法来完成</li>
+</ol>
+<p>实现的代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="annotation">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View v)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">switch</span> (v.getId())&#123;</span><br><span class="line">        <span class="keyword">case</span> R.id.button:</span><br><span class="line">            AnotherRightFragment fragment = <span class="keyword">new</span> AnotherRightFragment();</span><br><span class="line">            FragmentManager fragmentManager = getFragmentManager();</span><br><span class="line">            FragmentTransaction transaction = fragmentManager.beginTransaction();</span><br><span class="line">            transaction.replace(R.id.right_layout,fragment);</span><br><span class="line">            transaction.commit();</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+			
+				<p class="article-more-link">
+					<a href="/2015/05/31/note-android-fragment/#more">Read More...</a>
+				</p>
+      
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/android/">android</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/note/">note</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+
+
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-other-how-to-build-blog-or-wiki" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/05/26/other-how-to-build-blog-or-wiki/" class="article-date">
+  <time datetime="2015-05-25T16:00:00.000Z" itemprop="datePublished">2015-05-26</time>
+</a>
+		</span>
+		<span class="meta-elements author">Leibnik</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2015/05/26/other-how-to-build-blog-or-wiki/">个人blog或wiki的搭建——jekyll+markdown+git+github</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+			<p>update-2016-01-01: 本博客已改为hexo搭建</p>
+<h3 id="写在前面"><strong>写在前面</strong></h3>
+<p>这篇文章就当作我创建博客的一个简单的记录。</p>
+<h3 id="一-github账号申请"><strong>一、 github账号申请</strong></h3>
+<p><strong>1&gt;</strong> 进入<a href="https://github.com" class="uri">https://github.com</a>，没注册过的进入首页就是注册界面，填写注册信息并提交后，需进入自己注册邮箱，github会发送一份验证邮件到你的邮箱，只有通过邮箱验证才能正常的使用github上的服务。当然，github上也有付费服务，比如能够创建私人仓库，不过免费用户的所能使用的服务已经很齐全了。</p>
+			
+				<p class="article-more-link">
+					<a href="/2015/05/26/other-how-to-build-blog-or-wiki/#more">Read More...</a>
+				</p>
+      
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/折腾记/">折腾记</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/折腾/">折腾</a></li></ul>
+
 			</span>
 		</div>
 	</footer>
