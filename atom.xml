@@ -547,7 +547,7 @@ y_{0}\\
     <link href="http://leibnik.github.io/2016/01/02/build-your-hexo-blog/"/>
     <id>http://leibnik.github.io/2016/01/02/build-your-hexo-blog/</id>
     <published>2016-01-01T16:00:00.000Z</published>
-    <updated>2016-04-22T23:44:48.274Z</updated>
+    <updated>2016-04-22T23:48:16.294Z</updated>
     
     <content type="html">&lt;h3 id=&quot;一前提&quot;&gt;一、前提&lt;/h3&gt;
 &lt;p&gt;需要有Github账号，没有就到&lt;a href=&quot;https://github.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Github.com&lt;/a&gt;进行申请&lt;/p&gt;
@@ -783,7 +783,11 @@ y_{0}\\
 &amp;gt;这是一段引用
 &amp;gt;这是一段引用&lt;/code&gt;&lt;/pre&gt;
 &lt;blockquote&gt;
-&lt;p&gt;这是一段引用 这是一段引用 这是一段引用 这是一段引用 这是一段引用&lt;/p&gt;
+&lt;p&gt;这是一段引用&lt;br&gt;
+这是一段引用&lt;br&gt;
+这是一段引用&lt;br&gt;
+这是一段引用&lt;br&gt;
+这是一段引用&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h5 id=&quot;图片与链接&quot;&gt;图片与链接&lt;/h5&gt;
 &lt;p&gt;插入链接与插入图片的语法相似，区别在于一个&lt;code&gt;!&lt;/code&gt;号 图片为：&lt;code&gt;![这是图片](http://ww2.sinaimg.cn/mw690/b5405c76gw1f33sfvycawj205e05e0sx.jpg)&lt;/code&gt;添加后直接显示图片&lt;/p&gt;
