@@ -96,7 +96,7 @@
 创建一个仓库并命名为username.github.io，本人的就是leibnik.github.io，既是仓库的名称同时也是博客的网址，我们需要做的就是往这个仓库加入html文件，之所以使用Hexo来搭建博客，是因为方便，从MarkDown解析为html再将html文件部署到github，一气呵成。">
 <meta property="og:image" content="http://ww3.sinaimg.cn/mw690/b5405c76gw1esh81en3r1j205g07yglw.jpg">
 <meta property="og:image" content="http://ww2.sinaimg.cn/mw690/b5405c76gw1f33sfvycawj205e05e0sx.jpg">
-<meta property="og:updated_time" content="2016-04-22T17:04:40.246Z">
+<meta property="og:updated_time" content="2016-04-22T23:44:48.274Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭建专属于你的Hexo静态博客">
 <meta name="twitter:description" content="一、前提
@@ -543,12 +543,64 @@
 <h5 id="代码块">代码块</h5>
 <p>使用四个缩进空格表示代码块，需要保证上一行为空行 示例：</p>
 <pre><code>左手右手慢动作</code></pre>
-<p>更多的markdown语法请参考<a href="http://www.appinn.com/markdown/" target="_blank" rel="external">Markdown 语法说明</a></p>
+<p>代码块还可以这样写</p>
+<blockquote>
+<p>```<br>
+右手左手慢动作重播<br>
+```</p>
+</blockquote>
+<p>注意：<strong>`</strong>为反单引号，在键盘中数字键“1”的左边</p>
+<p>效果如下 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">右手左手慢动作重播</span><br></pre></td></tr></table></figure></p>
+<h5 id="代码高亮">代码高亮</h5>
+<p>针对特定语言产生的高亮效果，比如java，将代码置于 <strong>```java</strong> 和 <strong>```</strong> 之间</p>
+<blockquote>
+<p>```java<br>
+public class MainActivity extends AppCompatActivity {<br>
+<span class="citation">@Override</span><br>
+protected void onCreate(Bundle savedInstanceState) {<br>
+super.onCreate(savedInstanceState);<br>
+setContentView(R.layout.activity_main);<br>
+}<br>
+}<br>
+```</p>
+</blockquote>
+<p>效果如下： <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</span><br><span class="line">    <span class="annotation">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>再如xml文件，将代码置于 <strong>```xml</strong> 和 <strong>```</strong> 之间</p>
+<p>效果如下：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">activity</span> <span class="attribute">android:name</span>=<span class="value">".MainActivity"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">intent-filter</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">action</span> <span class="attribute">android:name</span>=<span class="value">"android.intent.action.MAIN"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">category</span> <span class="attribute">android:name</span>=<span class="value">"android.intent.category.LAUNCHER"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">intent-filter</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">activity</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h5 id="表格">表格</h5>
+<p>前面好几次用到了表格，所以这里再介绍一下表格的语法好了。写法如下：</p>
+<pre><code>书名|价格|页数                    // 表头
+---|---|---                       // 分割表头与记录
+java编程思想|108元|880            // 第一条记录
+android开发艺术探索|79元|507      // 第二条记录</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">书名</th>
+<th align="left">价格</th>
+<th align="left">页数</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">java编程思想</td>
+<td align="left">108元</td>
+<td align="left">880</td>
+</tr>
+<tr class="even">
+<td align="left">android开发艺术探索</td>
+<td align="left">79元</td>
+<td align="left">507</td>
+</tr>
+</tbody>
+</table>
+<p>更多的markdown语法请自行查找相关资料。</p>
 <h3 id="七发布">七、发布</h3>
 <p>修改网站配置文件<code>_config.yml</code>，添加仓库地址</p>
 <figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">repo</span>: <span class="attribute">https</span>:<span class="comment">//github.com/leibnik/leibnik.github.io.git  // 仓库地址</span></span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure>
 <p>在网站根目录下执行如下命令 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate&#9;// &#29983;&#25104;&#38745;&#24577;&#32593;&#39029;&#10;$ hexo deploy &#9;// &#37096;&#32626;&#21040;&#36828;&#31243;&#20179;&#24211;</span><br></pre></td></tr></table></figure></p>
-<p>执行<code>hexo deploy</code>后需要输入账号和密码才能完成部署，如果嫌麻烦可以设置无密码ssh安全连接到github</p>
+<p>执行<code>hexo deploy</code>后需要输入账号和密码才能完成部署，如果嫌麻烦可以设置无密码ssh安全连接到github，下面就是步骤，如果不嫌麻烦，那么就此跳过吧 : )</p>
 <p>先配置git <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user<span class="class">.name</span>  example</span><br><span class="line">$ git config --global user<span class="class">.email</span> example@example.com</span><br></pre></td></tr></table></figure></p>
 <p>接着生成ssh密钥 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &#34;youremail@email.com&#34;</span><br></pre></td></tr></table></figure></p>
 <p>查看密钥 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure></p>
@@ -564,7 +616,7 @@
 <figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">repo</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:leibnik/leibnik.github.io.git  <span class="comment">// repo为ssh地址</span></span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure>
 <p>成功添加后，每次部署到远程仓库就不再需要输入用户名和密码这么繁琐，并且更加安全。</p>
 <h3 id="八修改主题">八、修改主题</h3>
-<p>可到<a href="https://hexo.io/themes/" target="_blank" rel="external">官网主题市场</a>挑选一款自己喜欢的主题。</p>
+<p>可以到<a href="https://hexo.io/themes/" target="_blank" rel="external">官网主题市场</a>挑选一款自己喜欢的主题。</p>
 <p>以这款主题为例：<a href="https://github.com/denjones/hexo-theme-chan" target="_blank" rel="external">chan</a></p>
 <figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">https</span>://github.com/denjones/hexo-theme-chan.git themes/chan</span><br></pre></td></tr></table></figure>
 <p>将主题克隆到themes文件夹下，接着修改网站配置文件<code>_config.yml</code> <figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">theme</span>: <span class="string">chan</span></span><br></pre></td></tr></table></figure></p>
@@ -824,7 +876,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一前提"><span class="nav-number">1.</span> <span class="nav-text">一、前提</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二开始"><span class="nav-number">2.</span> <span class="nav-text">二、开始</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三安装hexo"><span class="nav-number">3.</span> <span class="nav-text">三、安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四正式搭建"><span class="nav-number">4.</span> <span class="nav-text">四、正式搭建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五简单介绍"><span class="nav-number">5.</span> <span class="nav-text">五、简单介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#六开始写作"><span class="nav-number">6.</span> <span class="nav-text">六、开始写作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#布局"><span class="nav-number">6.1.</span> <span class="nav-text">布局</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模板"><span class="nav-number">6.2.</span> <span class="nav-text">模板</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#front-matter"><span class="nav-number">6.3.</span> <span class="nav-text">Front-matter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#写作必备的markdown语法"><span class="nav-number">6.4.</span> <span class="nav-text">写作必备的MarkDown语法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#标题"><span class="nav-number">6.4.1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#斜体和粗体"><span class="nav-number">6.4.2.</span> <span class="nav-text">斜体和粗体</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#列表"><span class="nav-number">6.4.3.</span> <span class="nav-text">列表</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#引用"><span class="nav-number">6.4.4.</span> <span class="nav-text">引用</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#图片与链接"><span class="nav-number">6.4.5.</span> <span class="nav-text">图片与链接</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#行内代码块"><span class="nav-number">6.4.6.</span> <span class="nav-text">行内代码块</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#代码块"><span class="nav-number">6.4.7.</span> <span class="nav-text">代码块</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#七发布"><span class="nav-number">7.</span> <span class="nav-text">七、发布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#八修改主题"><span class="nav-number">8.</span> <span class="nav-text">八、修改主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#九域名绑定"><span class="nav-number">9.</span> <span class="nav-text">九、域名绑定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#十最后"><span class="nav-number">10.</span> <span class="nav-text">十、最后</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一前提"><span class="nav-number">1.</span> <span class="nav-text">一、前提</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二开始"><span class="nav-number">2.</span> <span class="nav-text">二、开始</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三安装hexo"><span class="nav-number">3.</span> <span class="nav-text">三、安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四正式搭建"><span class="nav-number">4.</span> <span class="nav-text">四、正式搭建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五简单介绍"><span class="nav-number">5.</span> <span class="nav-text">五、简单介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#六开始写作"><span class="nav-number">6.</span> <span class="nav-text">六、开始写作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#布局"><span class="nav-number">6.1.</span> <span class="nav-text">布局</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模板"><span class="nav-number">6.2.</span> <span class="nav-text">模板</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#front-matter"><span class="nav-number">6.3.</span> <span class="nav-text">Front-matter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#写作必备的markdown语法"><span class="nav-number">6.4.</span> <span class="nav-text">写作必备的MarkDown语法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#标题"><span class="nav-number">6.4.1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#斜体和粗体"><span class="nav-number">6.4.2.</span> <span class="nav-text">斜体和粗体</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#列表"><span class="nav-number">6.4.3.</span> <span class="nav-text">列表</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#引用"><span class="nav-number">6.4.4.</span> <span class="nav-text">引用</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#图片与链接"><span class="nav-number">6.4.5.</span> <span class="nav-text">图片与链接</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#行内代码块"><span class="nav-number">6.4.6.</span> <span class="nav-text">行内代码块</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#代码块"><span class="nav-number">6.4.7.</span> <span class="nav-text">代码块</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#代码高亮"><span class="nav-number">6.4.8.</span> <span class="nav-text">代码高亮</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#表格"><span class="nav-number">6.4.9.</span> <span class="nav-text">表格</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#七发布"><span class="nav-number">7.</span> <span class="nav-text">七、发布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#八修改主题"><span class="nav-number">8.</span> <span class="nav-text">八、修改主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#九域名绑定"><span class="nav-number">9.</span> <span class="nav-text">九、域名绑定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#十最后"><span class="nav-number">10.</span> <span class="nav-text">十、最后</span></a></li></ol></div>
             
           </div>
         </section>
