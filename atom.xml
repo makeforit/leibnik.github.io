@@ -547,12 +547,12 @@ y_{0}\\
     <link href="http://leibnik.github.io/2016/01/02/build-your-hexo-blog/"/>
     <id>http://leibnik.github.io/2016/01/02/build-your-hexo-blog/</id>
     <published>2016-01-01T16:00:00.000Z</published>
-    <updated>2016-04-22T14:56:09.617Z</updated>
+    <updated>2016-04-22T15:31:43.515Z</updated>
     
     <content type="html">&lt;h3 id=&quot;一前提&quot;&gt;一、前提&lt;/h3&gt;
 &lt;p&gt;需要有Github账号，没有就到&lt;a href=&quot;https://github.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Github.com&lt;/a&gt;进行申请&lt;/p&gt;
 &lt;h3 id=&quot;二开始&quot;&gt;二、开始&lt;/h3&gt;
-&lt;p&gt;创建一个仓库并命名为&lt;code&gt;username.github.io&lt;/code&gt;，本人的就是&lt;code&gt;leibnik.github.io&lt;/code&gt;，既是仓库的名称同时也是博客的网址，我们需要做的就是往这个仓库加入html文件，之所以使用Hexo来搭建博客，是因为方便。从MarkDown解析为html再将html文件部署到github，一气呵成。&lt;/p&gt;
+&lt;p&gt;创建一个仓库并命名为&lt;code&gt;username.github.io&lt;/code&gt;，本人的就是&lt;code&gt;leibnik.github.io&lt;/code&gt;，既是仓库的名称同时也是博客的网址，我们需要做的就是往这个仓库加入html文件，之所以使用Hexo来搭建博客，是因为方便，从MarkDown解析为html再将html文件部署到github，一气呵成。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h3 id=&quot;三安装hexo&quot;&gt;三、安装Hexo&lt;/h3&gt;
 &lt;p&gt;Hexo安装前又有两个前提，需要先确定已经安装了下面两个应用程序：&lt;/p&gt;
@@ -567,7 +567,7 @@ y_{0}\\
 &lt;p&gt;完成后，其实我们已经可以在本地先预览我们的网站，执行 &lt;figure class=&quot;highlight axapta&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo &lt;span class=&quot;keyword&quot;&gt;server&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;提示成功后，用浏览器访问地址&lt;code&gt;http://localhost:4000/&lt;/code&gt;，就能看到我们的静态网站。&lt;/p&gt;
 &lt;h3 id=&quot;五简单介绍&quot;&gt;五、简单介绍&lt;/h3&gt;
-&lt;p&gt;回到我们的博客目录&lt;code&gt;&amp;lt;folder&amp;gt;&lt;/code&gt;，其目录结构如下： &lt;figure class=&quot;highlight livescript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;├── _config.yml          &lt;span class=&quot;string&quot;&gt;\\&lt;/span&gt; 网站的配置信息&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;├── package.json         &lt;span class=&quot;string&quot;&gt;\\&lt;/span&gt; 应用程序的信息&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;├── scaffolds		 &lt;span class=&quot;string&quot;&gt;\\&lt;/span&gt; 存放模板的文件夹，新建文章时用到&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;├── source               &lt;span class=&quot;string&quot;&gt;\\&lt;/span&gt; 资源文件夹&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|   ├── _drafts&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|   └── _posts			 &lt;span class=&quot;string&quot;&gt;\\&lt;/span&gt; markdown文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;└── themes               &lt;span class=&quot;string&quot;&gt;\\&lt;/span&gt; 主题文件夹，hexo根据主题来生成html，默认主题landscape&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;回到我们的博客目录&lt;code&gt;&amp;lt;folder&amp;gt;&lt;/code&gt;，其目录结构如下： &lt;figure class=&quot;highlight livescript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;├── public               &lt;span class=&quot;string&quot;&gt;\\&lt;/span&gt; hexo生成的静态网页&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;├── _config.yml          &lt;span class=&quot;string&quot;&gt;\\&lt;/span&gt; 网站的配置信息&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;├── package.json         &lt;span class=&quot;string&quot;&gt;\\&lt;/span&gt; 应用程序的信息&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;├── scaffolds		 &lt;span class=&quot;string&quot;&gt;\\&lt;/span&gt; 存放模板的文件夹，新建文章时用到&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;├── source               &lt;span class=&quot;string&quot;&gt;\\&lt;/span&gt; 资源文件夹&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|   ├── _drafts&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|   └── _posts			 &lt;span class=&quot;string&quot;&gt;\\&lt;/span&gt; markdown文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;└── themes               &lt;span class=&quot;string&quot;&gt;\\&lt;/span&gt; 主题文件夹，hexo根据主题来生成html，默认主题landscape&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;接着我们打开&lt;code&gt;_config.yml&lt;/code&gt;文件瞅一瞅。可以看到有许多类似&lt;code&gt;key: value&lt;/code&gt;这样的配置信息，都是有着特定的意义的，如下图&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -818,7 +818,8 @@ y_{0}\\
 &lt;p&gt;theme变量的值就是themes文件夹下主题名称，主题文件夹下有同样名为&lt;code&gt;_config.yml&lt;/code&gt;的主题配置文件，其配置一般根据不同的主题而定，需要参考主题作者的介绍进行配置，这部分不再深入&lt;/p&gt;
 &lt;h3 id=&quot;九域名绑定&quot;&gt;九、域名绑定&lt;/h3&gt;
 &lt;p&gt;创建&lt;code&gt;CNAME&lt;/code&gt;文件填写自己的域名，比如本人的 &lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;droidroid&lt;/span&gt;&lt;span class=&quot;class&quot;&gt;.com&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;放在&lt;code&gt;source&lt;/code&gt;文件夹下。然后到DNS服务商控制台，CNAME文件里的域名添加解析，记录类型为CNAME，记录值为&lt;code&gt;username.github.io&lt;/code&gt;， 将网站部署到github，稍等几分钟就能生效啦。&lt;/p&gt;
+&lt;p&gt;放在&lt;code&gt;source&lt;/code&gt;文件夹下。然后到DNS服务商控制台，CNAME文件里的域名添加解析，记录类型为A，记录值为&lt;code&gt;192.30.252.153&lt;/code&gt;或者 &lt;code&gt;192.30.252.154&lt;/code&gt;，可以参考github官网介绍&lt;a href=&quot;https://help.github.com/articles/setting-up-an-apex-domain/#configuring-a-records-with-your-dns-provider&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Configuring A records with your DNS provider&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;然后将网站部署到github，稍等几分钟就能生效啦。你可以通过droidroid.com或者leibnik.github.io来访问我的博客。&lt;/p&gt;
 &lt;h3 id=&quot;十最后&quot;&gt;十、最后&lt;/h3&gt;
 &lt;p&gt;以上就是搭建Hexo静态博客简单的流程。&lt;/p&gt;
 &lt;p&gt;朋友，一起开启我们的博客之旅吧！&lt;/p&gt;
@@ -829,7 +830,7 @@ y_{0}\\
       &lt;h3 id=&quot;一前提&quot;&gt;一、前提&lt;/h3&gt;
 &lt;p&gt;需要有Github账号，没有就到&lt;a href=&quot;https://github.com&quot;&gt;Github.com&lt;/a&gt;进行申请&lt;/p&gt;
 &lt;h3 id=&quot;二开始&quot;&gt;二、开始&lt;/h3&gt;
-&lt;p&gt;创建一个仓库并命名为&lt;code&gt;username.github.io&lt;/code&gt;，本人的就是&lt;code&gt;leibnik.github.io&lt;/code&gt;，既是仓库的名称同时也是博客的网址，我们需要做的就是往这个仓库加入html文件，之所以使用Hexo来搭建博客，是因为方便。从MarkDown解析为html再将html文件部署到github，一气呵成。&lt;/p&gt;
+&lt;p&gt;创建一个仓库并命名为&lt;code&gt;username.github.io&lt;/code&gt;，本人的就是&lt;code&gt;leibnik.github.io&lt;/code&gt;，既是仓库的名称同时也是博客的网址，我们需要做的就是往这个仓库加入html文件，之所以使用Hexo来搭建博客，是因为方便，从MarkDown解析为html再将html文件部署到github，一气呵成。&lt;/p&gt;
     
     </summary>
     
