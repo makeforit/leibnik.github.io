@@ -82,16 +82,16 @@
 
 
 
-<meta name="description" content="用着Bmob提供的后端云感觉挺好用的，期间遇到一些坑，查了文档也没见说明，在此做一下记录。">
+<meta name="description" content="最近尝试使用Bmob提供的后端云，请求响应速度还行，功能上基本能满足开发需求，期间遇到一些坑，查了文档也没见说明，在此做一下记录。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用Bmob后端云遇到的坑">
 <meta property="og:url" content="http://leibnik.github.io/2016/02/27/android-about-bmob/index.html">
 <meta property="og:site_name" content="Leibnik's blog">
-<meta property="og:description" content="用着Bmob提供的后端云感觉挺好用的，期间遇到一些坑，查了文档也没见说明，在此做一下记录。">
-<meta property="og:updated_time" content="2016-03-10T22:00:23.346Z">
+<meta property="og:description" content="最近尝试使用Bmob提供的后端云，请求响应速度还行，功能上基本能满足开发需求，期间遇到一些坑，查了文档也没见说明，在此做一下记录。">
+<meta property="og:updated_time" content="2016-04-22T20:18:39.939Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用Bmob后端云遇到的坑">
-<meta name="twitter:description" content="用着Bmob提供的后端云感觉挺好用的，期间遇到一些坑，查了文档也没见说明，在此做一下记录。">
+<meta name="twitter:description" content="最近尝试使用Bmob提供的后端云，请求响应速度还行，功能上基本能满足开发需求，期间遇到一些坑，查了文档也没见说明，在此做一下记录。">
 
 
 
@@ -305,7 +305,7 @@
       
 
       
-        <p>用着Bmob提供的后端云感觉挺好用的，期间遇到一些坑，查了文档也没见说明，在此做一下记录。</p>
+        <p>最近尝试使用Bmob提供的后端云，请求响应速度还行，功能上基本能满足开发需求，期间遇到一些坑，查了文档也没见说明，在此做一下记录。</p>
 <a id="more"></a>
 <p>比如像微信朋友圈那样发一条带图片的动态。假如是这样的一个类： <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Daily</span> <span class="keyword">extends</span> <span class="title">BmobObject</span></span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">1L</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> String text;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 动态与用户是一对一个关系</span></span><br><span class="line">	<span class="keyword">private</span> User user;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> List&lt;String&gt; images;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 下面是getter/setter...</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>应该考虑到若上传了图片等文件，需要先返回文件的服务器地址，再上传一条记录，确保一条记录完整地添加到数据库表。</p>
@@ -548,6 +548,20 @@
         
 
         
+        
+          <div class="links-of-blogroll motion-element">
+            <div class="links-of-blogroll-title">
+              <i class="fa fa-globe fa-fw"></i>
+              友链
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://" title="下一个是谁" target="_blank">下一个是谁</a>
+                </li>
+              
+            </ul>
+          </div>
         
 
       </section>

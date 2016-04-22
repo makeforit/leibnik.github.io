@@ -82,23 +82,23 @@
 
 
 
-<meta name="description" content="在面向对象编程中，观察者模式使用率非常高，最近流行的响应式编程框架RxJava就对观察者模式做出了扩展。了解了观察者模式也有助于对Rxjava的学习。
+<meta name="description" content="在面向对象编程中，观察者模式使用率非常高，最近流行的响应式编程框架RxJava就是对观察者模式做出了扩展，因此，了解观察者模式也有助于对Rxjava的学习。
 定义
-观察者模式中有两个角色，被观察者与观察者，它们之间是一种一对多的依赖关系，当被观察者的状态发生改变时，观察者也发生相应的行为。在现实生活中很容易找出这样的例子，比如教室里的教师和学生听到下课铃声响了之后下课休息，教师和学生是观察者，下课铃">
+观察者模式中有两个角色，被观察者与观察者，它们之间是一种一对多的依赖关系，当被观察者的状态发生改变时，观察者也发生相应的行为。在现实生活中很容易找出这样的例子，比如教室里的教师和学生听到下课铃声响了之后下课休息，教师和学生是观察者，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="浅析设计模式之观察者模式">
 <meta property="og:url" content="http://leibnik.github.io/2016/03/06/designpaterns-observer/index.html">
 <meta property="og:site_name" content="Leibnik's blog">
-<meta property="og:description" content="在面向对象编程中，观察者模式使用率非常高，最近流行的响应式编程框架RxJava就对观察者模式做出了扩展。了解了观察者模式也有助于对Rxjava的学习。
+<meta property="og:description" content="在面向对象编程中，观察者模式使用率非常高，最近流行的响应式编程框架RxJava就是对观察者模式做出了扩展，因此，了解观察者模式也有助于对Rxjava的学习。
 定义
-观察者模式中有两个角色，被观察者与观察者，它们之间是一种一对多的依赖关系，当被观察者的状态发生改变时，观察者也发生相应的行为。在现实生活中很容易找出这样的例子，比如教室里的教师和学生听到下课铃声响了之后下课休息，教师和学生是观察者，下课铃">
+观察者模式中有两个角色，被观察者与观察者，它们之间是一种一对多的依赖关系，当被观察者的状态发生改变时，观察者也发生相应的行为。在现实生活中很容易找出这样的例子，比如教室里的教师和学生听到下课铃声响了之后下课休息，教师和学生是观察者，">
 <meta property="og:image" content="http://ww4.sinaimg.cn/mw690/006nezkigw1f1mzq41atkj30e20aqq3c.jpg">
-<meta property="og:updated_time" content="2016-03-10T21:57:15.995Z">
+<meta property="og:updated_time" content="2016-04-22T20:12:19.599Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浅析设计模式之观察者模式">
-<meta name="twitter:description" content="在面向对象编程中，观察者模式使用率非常高，最近流行的响应式编程框架RxJava就对观察者模式做出了扩展。了解了观察者模式也有助于对Rxjava的学习。
+<meta name="twitter:description" content="在面向对象编程中，观察者模式使用率非常高，最近流行的响应式编程框架RxJava就是对观察者模式做出了扩展，因此，了解观察者模式也有助于对Rxjava的学习。
 定义
-观察者模式中有两个角色，被观察者与观察者，它们之间是一种一对多的依赖关系，当被观察者的状态发生改变时，观察者也发生相应的行为。在现实生活中很容易找出这样的例子，比如教室里的教师和学生听到下课铃声响了之后下课休息，教师和学生是观察者，下课铃">
+观察者模式中有两个角色，被观察者与观察者，它们之间是一种一对多的依赖关系，当被观察者的状态发生改变时，观察者也发生相应的行为。在现实生活中很容易找出这样的例子，比如教室里的教师和学生听到下课铃声响了之后下课休息，教师和学生是观察者，">
 
 
 
@@ -312,7 +312,7 @@
       
 
       
-        <p>在面向对象编程中，观察者模式使用率非常高，最近流行的响应式编程框架RxJava就对观察者模式做出了扩展。了解了观察者模式也有助于对Rxjava的学习。</p>
+        <p>在面向对象编程中，观察者模式使用率非常高，最近流行的响应式编程框架RxJava就是对观察者模式做出了扩展，因此，了解观察者模式也有助于对Rxjava的学习。</p>
 <h4 id="定义">定义</h4>
 <p>观察者模式中有两个角色，被观察者与观察者，它们之间是一种一对多的依赖关系，当被观察者的状态发生改变时，观察者也发生相应的行为。在现实生活中很容易找出这样的例子，比如教室里的教师和学生听到下课铃声响了之后下课休息，教师和学生是观察者，下课铃是被观察者，下课铃响了也就是被观察者的状态发生改变，教师和学生这些观察者做出相应的行动。另外，观察者模式也可以称为订阅-发布模式，因为观察者与被观察者的一系列活动可以简单概括为订阅和发布。使用类图表示观察者模式，如下图</p>
 <a id="more"></a>
@@ -557,6 +557,20 @@
         
 
         
+        
+          <div class="links-of-blogroll motion-element">
+            <div class="links-of-blogroll-title">
+              <i class="fa fa-globe fa-fw"></i>
+              友链
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://" title="下一个是谁" target="_blank">下一个是谁</a>
+                </li>
+              
+            </ul>
+          </div>
         
 
       </section>
