@@ -547,7 +547,7 @@ y_{0}\\
     <link href="http://leibnik.github.io/2016/01/02/build-your-hexo-blog/"/>
     <id>http://leibnik.github.io/2016/01/02/build-your-hexo-blog/</id>
     <published>2016-01-01T16:00:00.000Z</published>
-    <updated>2016-04-22T23:48:16.294Z</updated>
+    <updated>2016-04-23T04:08:07.514Z</updated>
     
     <content type="html">&lt;h3 id=&quot;一前提&quot;&gt;一、前提&lt;/h3&gt;
 &lt;p&gt;需要有Github账号，没有就到&lt;a href=&quot;https://github.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Github.com&lt;/a&gt;进行申请&lt;/p&gt;
@@ -750,7 +750,7 @@ y_{0}\\
 &lt;p class=&quot;caption&quot;&gt;标题效果&lt;/p&gt;
 &lt;/div&gt;
 &lt;h5 id=&quot;斜体和粗体&quot;&gt;斜体和粗体&lt;/h5&gt;
-&lt;p&gt;使用 * 和 ** 表示斜体和粗体。 示例： 这是 &lt;em&gt;斜体&lt;/em&gt;，这是 &lt;strong&gt;粗体&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;使用 * 和 ** 表示斜体和粗体。用法：*斜体*，**粗体**。 示例： 这是 &lt;em&gt;斜体&lt;/em&gt;，这是 &lt;strong&gt;粗体&lt;/strong&gt;。&lt;/p&gt;
 &lt;h5 id=&quot;列表&quot;&gt;列表&lt;/h5&gt;
 &lt;p&gt;在多行需要以列表进行呈现时，可在每行文字前加&lt;code&gt;-&lt;/code&gt;或&lt;code&gt;*&lt;/code&gt;表示无序列表，每行按数字顺序&lt;code&gt;1.&lt;/code&gt; &lt;code&gt;2.&lt;/code&gt; &lt;code&gt;3.&lt;/code&gt;添加则为有序列表，注意点好与其后面需要间隔空格，效果如下&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;    - 第一行
@@ -872,12 +872,14 @@ android开发艺术探索|79元|507      // 第二条记录&lt;/code&gt;&lt;/pre
 &lt;figure class=&quot;highlight less&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;deploy&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attribute&quot;&gt;type&lt;/span&gt;: git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attribute&quot;&gt;repo&lt;/span&gt;: git&lt;span class=&quot;variable&quot;&gt;@github&lt;/span&gt;.&lt;span class=&quot;attribute&quot;&gt;com&lt;/span&gt;:leibnik/leibnik.github.io.git  &lt;span class=&quot;comment&quot;&gt;// repo为ssh地址&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attribute&quot;&gt;branch&lt;/span&gt;: master&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;成功添加后，每次部署到远程仓库就不再需要输入用户名和密码这么繁琐，并且更加安全。&lt;/p&gt;
 &lt;h3 id=&quot;八修改主题&quot;&gt;八、修改主题&lt;/h3&gt;
+&lt;p&gt;不打算修改主题可以跳过啦 : )&lt;/p&gt;
 &lt;p&gt;可以到&lt;a href=&quot;https://hexo.io/themes/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官网主题市场&lt;/a&gt;挑选一款自己喜欢的主题。&lt;/p&gt;
 &lt;p&gt;以这款主题为例：&lt;a href=&quot;https://github.com/denjones/hexo-theme-chan&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;chan&lt;/a&gt;&lt;/p&gt;
 &lt;figure class=&quot;highlight crmsh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git &lt;span class=&quot;keyword&quot;&gt;clone&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;https&lt;/span&gt;://github.com/denjones/hexo-theme-chan.git themes/chan&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;将主题克隆到themes文件夹下，接着修改网站配置文件&lt;code&gt;_config.yml&lt;/code&gt; &lt;figure class=&quot;highlight http&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;theme&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;chan&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;theme变量的值就是themes文件夹下主题名称，主题文件夹下有同样名为&lt;code&gt;_config.yml&lt;/code&gt;的主题配置文件，其配置一般根据不同的主题而定，需要参考主题作者的介绍进行配置，这部分不再深入&lt;/p&gt;
 &lt;h3 id=&quot;九域名绑定&quot;&gt;九、域名绑定&lt;/h3&gt;
+&lt;p&gt;不打算绑定域名的可以跳过 :) 网站部署到github后，就能以&lt;code&gt;username.github.io&lt;/code&gt;的形式访问自己的博客啦。&lt;/p&gt;
 &lt;p&gt;创建&lt;code&gt;CNAME&lt;/code&gt;文件填写自己的域名，比如本人的 &lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;droidroid&lt;/span&gt;&lt;span class=&quot;class&quot;&gt;.com&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;放在&lt;code&gt;source&lt;/code&gt;文件夹下。然后到DNS服务商控制台，CNAME文件里的域名添加解析，记录类型为A，记录值为&lt;code&gt;192.30.252.153&lt;/code&gt;或者 &lt;code&gt;192.30.252.154&lt;/code&gt;，可以参考github官网介绍&lt;a href=&quot;https://help.github.com/articles/setting-up-an-apex-domain/#configuring-a-records-with-your-dns-provider&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Configuring A records with your DNS provider&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;然后将网站部署到github，稍等几分钟就能生效啦。你可以通过&lt;code&gt;droidroid.com&lt;/code&gt;或者&lt;code&gt;leibnik.github.io&lt;/code&gt;来访问我的博客。&lt;/p&gt;

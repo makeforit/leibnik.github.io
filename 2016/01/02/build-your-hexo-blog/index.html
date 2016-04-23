@@ -96,7 +96,7 @@
 创建一个仓库并命名为username.github.io，本人的就是leibnik.github.io，既是仓库的名称同时也是博客的网址，我们需要做的就是往这个仓库加入html文件，之所以使用Hexo来搭建博客，是因为方便，从MarkDown解析为html再将html文件部署到github，一气呵成。">
 <meta property="og:image" content="http://ww3.sinaimg.cn/mw690/b5405c76gw1esh81en3r1j205g07yglw.jpg">
 <meta property="og:image" content="http://ww2.sinaimg.cn/mw690/b5405c76gw1f33sfvycawj205e05e0sx.jpg">
-<meta property="og:updated_time" content="2016-04-22T23:48:16.294Z">
+<meta property="og:updated_time" content="2016-04-23T04:08:07.514Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭建专属于你的Hexo静态博客">
 <meta name="twitter:description" content="一、前提
@@ -498,7 +498,7 @@
 <p class="caption">标题效果</p>
 </div>
 <h5 id="斜体和粗体">斜体和粗体</h5>
-<p>使用 * 和 ** 表示斜体和粗体。 示例： 这是 <em>斜体</em>，这是 <strong>粗体</strong>。</p>
+<p>使用 * 和 ** 表示斜体和粗体。用法：*斜体*，**粗体**。 示例： 这是 <em>斜体</em>，这是 <strong>粗体</strong>。</p>
 <h5 id="列表">列表</h5>
 <p>在多行需要以列表进行呈现时，可在每行文字前加<code>-</code>或<code>*</code>表示无序列表，每行按数字顺序<code>1.</code> <code>2.</code> <code>3.</code>添加则为有序列表，注意点好与其后面需要间隔空格，效果如下</p>
 <pre><code>    - 第一行
@@ -620,12 +620,14 @@ android开发艺术探索|79元|507      // 第二条记录</code></pre>
 <figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">repo</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:leibnik/leibnik.github.io.git  <span class="comment">// repo为ssh地址</span></span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure>
 <p>成功添加后，每次部署到远程仓库就不再需要输入用户名和密码这么繁琐，并且更加安全。</p>
 <h3 id="八修改主题">八、修改主题</h3>
+<p>不打算修改主题可以跳过啦 : )</p>
 <p>可以到<a href="https://hexo.io/themes/" target="_blank" rel="external">官网主题市场</a>挑选一款自己喜欢的主题。</p>
 <p>以这款主题为例：<a href="https://github.com/denjones/hexo-theme-chan" target="_blank" rel="external">chan</a></p>
 <figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">https</span>://github.com/denjones/hexo-theme-chan.git themes/chan</span><br></pre></td></tr></table></figure>
 <p>将主题克隆到themes文件夹下，接着修改网站配置文件<code>_config.yml</code> <figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">theme</span>: <span class="string">chan</span></span><br></pre></td></tr></table></figure></p>
 <p>theme变量的值就是themes文件夹下主题名称，主题文件夹下有同样名为<code>_config.yml</code>的主题配置文件，其配置一般根据不同的主题而定，需要参考主题作者的介绍进行配置，这部分不再深入</p>
 <h3 id="九域名绑定">九、域名绑定</h3>
+<p>不打算绑定域名的可以跳过 :) 网站部署到github后，就能以<code>username.github.io</code>的形式访问自己的博客啦。</p>
 <p>创建<code>CNAME</code>文件填写自己的域名，比如本人的 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">droidroid</span><span class="class">.com</span></span><br></pre></td></tr></table></figure></p>
 <p>放在<code>source</code>文件夹下。然后到DNS服务商控制台，CNAME文件里的域名添加解析，记录类型为A，记录值为<code>192.30.252.153</code>或者 <code>192.30.252.154</code>，可以参考github官网介绍<a href="https://help.github.com/articles/setting-up-an-apex-domain/#configuring-a-records-with-your-dns-provider" target="_blank" rel="external">Configuring A records with your DNS provider</a></p>
 <p>然后将网站部署到github，稍等几分钟就能生效啦。你可以通过<code>droidroid.com</code>或者<code>leibnik.github.io</code>来访问我的博客。</p>
